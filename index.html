@@ -1,29 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--Подключили Bootstrap фреймворк-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Название страницы-->
     <title>My awesome page</title>
+    <!--Здесь создаем свой класс rounded-img
+    и CSS правила в нем Ширина 60%родительского элемента(колонки)
+    50% это скругление и тд
+    padding это внешний отступ для картинки(ободок)
+    margin-botton - отступ снизу-->
+    <style>
+      .rounded-img {
+        width: 60%;
+        border-radius: 30%;
+        box-shadow: 0 0 10px rgb(0, 0, 0.5);
+        padding: 5px;
+        margin-bottom: 1em;
+      }
+    </style>
   </head>
   <body>
-    <div class="container text-center">
+    <!--(my-5)Это отступ для картинки сверху. y - вертикальная ось-->
+    <div class="container text-center my-5">
       <div class="row">
-        <div class="col-md-4 col-lg-4 mx-auto">
-          <img src="img.jpeg" alt="Michael Jordan" />
-          <h1 class="fw-light" > Michael Jordan</h1>
+        <div class="col-md-1 col-lg-4 mx-auto">
+          <img src="img.jpeg" alt="Egor Tonguzov" class="rounded-img" />
+          <h1 class="fw-light">Egor Tonguzov</h1>
 
           <p class="lead text-muted">
             I am exicied to teach you software development. In this HTML course
             you will build your personal website
           </p>
-          <a href="https://www.strava.com/athletes/68953454" target="_blank">
-            <button class="btn btn-primary">Shot!</button>
+          <!--href -ссылка, target - открыть ссылку в новой вкладке, class - стиль конопки 
+          для кнопки btn, btn-primary -стиль кнопки-->
+          <a
+            href="https://www.strava.com/athletes/68953454"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            Strava
+          </a>
+
+          <a
+            href="https://www.youtube.com/watch?v=y1KuYV_cZY4"
+            target="_blank"
+            class="btn btn-warning"
+          >
+            About strava
           </a>
         </div>
       </div>
