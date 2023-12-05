@@ -23,13 +23,24 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <!--Иконка вкладки-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png" />
+    <link rel="manifest" href="/icon/site.webmanifest" />
     <style>
-      .rounded-img {
+      .card {
+        border-radius: 1em;
+        text-align: center;
+        padding: 1em;
+      }
+      .card:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .card img {
+        border-radius: 50%;
         width: 60%;
-        border-radius: 30%;
-        box-shadow: 0 0 10px rgb(0, 0, 0.5);
-        padding: 5px;
-        margin-bottom: 1em;
+        margin: auto;
       }
     </style>
   </head>
@@ -38,7 +49,7 @@
       <div class="container">
         <!--Здесь href='/' означатет что ссылка ведет на нашу главную страницу на корневой URL-->
         <a class="navbar-brand p-0" href="/">
-          <img src="ET.png" alt="Logo" width="50" />
+          <img src="/logo/ET.png" alt="Logo" width="50" />
         </a>
 
         <button
@@ -57,44 +68,90 @@
             <!-- <ul> Неупорядоченный список https://developer.mozilla.org/ru/docs/Web/HTML/Element/ul
               li это элемент списка-->
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Favorite placess</a>
+              <a class="nav-link active" href="places.html">Favorite placess</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
-    <!--(my-5)Это отступ для картинки сверху. y - вертикальная ось-->
-    <div class="container text-center my-5">
-      <div class="row">
-        <div class="col-md-1 col-lg-4 mx-auto">
-          <img src="img.jpeg" alt="Egor Tonguzov" class="rounded-img" />
-          <h1 class="fw-light">Egor Tonguzov</h1>
-
-          <p class="lead text-muted">
-            I am exicied to teach you software development. In this HTML course
-            you will build your personal website
-          </p>
-          <!--href -ссылка, target - открыть ссылку в новой вкладке, class - стиль конопки 
-          для кнопки btn, btn-primary -стиль кнопки-->
-          <a
-            href="https://www.strava.com/athletes/68953454"
-            target="_blank"
-            class="btn btn-primary"
-          >
-            Strava
-          </a>
-
-          <a
-            href="https://www.youtube.com/watch?v=y1KuYV_cZY4"
-            target="_blank"
-            class="btn btn-warning"
-          >
-            About strava
-          </a>
+    <!--Здесь использую класс CSS my-5 для того что бы сделать отступ для картанки по всем сторонам-->
+    <div class="container my-5">
+      <!--Здесь(row row-cols-1 row-cols-md-2 row-cols-lg-3) мы указываес сколько столбцов 
+      должно быть в ряду в зависимости от ширины экрана.
+      row row-cols-1 - В остальных случаях 1
+      row-cols-md-2 - Если ширина экрана md то будет 2 столбца
+      row-cols-lg-3 Если ширина экрана lg(large) то будет 3 столбца-->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+        <div class="col">
+          <div class="card">
+            <img
+              src="https://picsum.photos/id/79/300"
+              class="card-img-top"
+              alt="My image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Almaty</h5>
+              <p class="card-text">
+                Almaty is the largest city in Kazakhstan, with a population of
+                over 2 million.
+              </p>
+              <a
+                href="https://picsum.photos/id/79/1500"
+                target="_blank"
+                class="btn btn-primary"
+                >Large photo</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="https://picsum.photos/id/85/300"
+              class="card-img-top"
+              alt="My image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Village</h5>
+              <p class="card-text">
+                A village is a clustered human settlement or community, larger
+                than a hamlet but smaller than a town
+              </p>
+              <a
+                href="https://picsum.photos/id/85/1500"
+                target="_blank"
+                class="btn btn-primary"
+                >Large photo</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="https://picsum.photos/id/110/300"
+              class="card-img-top"
+              alt="My image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Forest</h5>
+              <p class="card-text">
+                A forest is an area of land dominated by trees.Hundreds of
+                definitions of forest are used throughout the world,
+                incorporating factors such as tree density, tree height, land
+                use, legal standing, and ecological function.
+              </p>
+              <a
+                href="https://picsum.photos/id/110/1500"
+                target="_blank"
+                class="btn btn-primary"
+                >Large photo</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
